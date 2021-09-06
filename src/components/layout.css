@@ -1,0 +1,11 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #262626;
+  margin: 1 1 1 1;
+}
+p {
+  color: white;
+}

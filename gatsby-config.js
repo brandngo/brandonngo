@@ -7,6 +7,7 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-breakpoints",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
@@ -18,3 +19,4 @@ module.exports = {
     },
   ],
 };
+ // change breakpoint md to 800px width then use bp.md instead
