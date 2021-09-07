@@ -37,12 +37,14 @@ const lastNavItem = {
 }
 
 const Navbar = () => {
+  let path = window.location.pathname.split('/')[1];
+
   return (
     <nav style={nav}>
-      <Link style={navItems} to="/contact">CONTACT</Link>
-      <Link style={navItems} to="/resume">RESUME</Link>
-      <Link style={navItems} to="/projects">PROJECTS</Link>
-      <Link style={activeItem} to="/">ABOUT</Link>
+      <Link style={path === "contact" ? activeItem : navItems} to="/contact">CONTACT</Link>
+      <Link style={path === "resume" ? activeItem : navItems} to="/resume">RESUME</Link>
+      <Link style={path === "projects" ? activeItem : navItems} to="/projects">PROJECTS</Link>
+      <Link style={path === "" ? activeItem : navItems} to="/">ABOUT</Link>
     </nav>
   )
 }

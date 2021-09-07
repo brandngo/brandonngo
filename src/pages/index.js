@@ -3,11 +3,9 @@ import Layout from '../components/layout'
 import "../components/animations.css"
 import { Link } from 'gatsby'
 
-// styles
-
-// markup
 const IndexPage = () => {
 
+  // can make span class blinkingCursor as a separate component
   return (
     <Layout>
       <p>Brandon Ngo</p>
