@@ -8,6 +8,8 @@ body {
   background-color: #262626;
   margin: 1 1 1 1;
 }
+
+/* leave font size as px to make it clearer for hidpi */
 p {
   color: white;
   font-family: "Coda";

@@ -16,8 +16,8 @@ const fullPage = {
 
 const smallPage = {
   border: "1.4px solid #909090",
-  width: "100%",
-  height: "100%",
+  width: "99.5%",
+  height: "98vh",
 }
 
 const contentBox = {
@@ -28,12 +28,8 @@ const contentBox = {
   border: "1.4px solid #909090",
 }
 
-const header = {
-  margin: "0 0.3rem",
-}
-
 const content = {
-  margin: "3vh 0 0 1vw",
+  marginTop: "3vh",
 }
 
 export default function Layout({ children }) {
@@ -42,9 +38,10 @@ export default function Layout({ children }) {
   return (
     <div style={bp.sm ? smallPage : fullPage}>
       <div style={bp.sm ? null : contentBox}>
-        <div style={header}>
+        <div style={{margin: "1vw"}}>
           <Navbar />
           <div style={content}>
+            <p>Brandon Ngo</p>
             {children}
           </div>
         </div>
