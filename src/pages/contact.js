@@ -1,11 +1,10 @@
 import * as React from 'react'
-import Layout from '../components/layout'
-import Card from '../components/card'
+import Layout from '../components/Layout'
+import ProjectCard from '../components/ProjectCard'
 
 const Contact = () => {
   return (
     <Layout>
-      <Card />
     </Layout>
   )
 }

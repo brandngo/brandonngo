@@ -1,6 +1,6 @@
 import React from "react"
 import "./layout.css"
-import Navbar from '../components/navbar'
+import Navbar from './Navbar'
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 const fullPage = {
@@ -32,6 +32,12 @@ const content = {
   marginTop: "3vh",
 }
 
+const scrollable = {
+  overflowY: "scroll",
+  overflowX: "hidden",
+  maxHeight: "100%",
+}
+
 export default function Layout({ children }) {
   const bp = useBreakpoint();
 
@@ -42,7 +48,9 @@ export default function Layout({ children }) {
           <Navbar />
           <div style={content}>
             <p>Brandon Ngo</p>
-            {children}
+            <div style={scrollable}>
+              {children}
+            </div>
           </div>
         </div>
       </div>

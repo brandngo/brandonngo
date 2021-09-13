@@ -12,7 +12,6 @@ const nav = {
 
 const navItems = {
   textDecoration: "none",
-  
   fontFamily: "Consolas",
   fontSize: "2.5vh",
   color: "#909090",
@@ -22,7 +21,6 @@ const activeItem = {
   textUnderlineOffset: "8px",
   textDecorationThickness: "3px",
   textDecorationColor: "#C95D3B",
-
   fontFamily: "Consolas",
   fontSize: "2.5vh",
   color: "#909090",
@@ -34,7 +32,7 @@ const Navbar = () => {
   return (
     <nav style={nav}>
       <Link style={path === "contact" ? activeItem : navItems} to="/contact">CONTACT</Link>
-      <Link style={path === "resume" ? activeItem : navItems} to="/resume">RESUME</Link>
+      <Link style={path === "experience" ? activeItem : navItems} to="/experience">EXPERIENCE</Link>
       <Link style={path === "projects" ? activeItem : navItems} to="/projects">PROJECTS</Link>
       <Link style={path === "" ? activeItem : navItems} to="/">ABOUT</Link>
     </nav>
