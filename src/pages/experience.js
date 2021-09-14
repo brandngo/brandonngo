@@ -1,6 +1,7 @@
 import * as React from 'react'
 import ExpCard from '../components/ExpCard';
 import Layout from '../components/Layout'
+import Timeline from '../components/Timeline';
 import resume from '../images/resume.pdf'
 
 const iconImgs = [
@@ -53,6 +54,7 @@ const Experience = () => {
       </ExpCard>
       <ExpCard title="Employment">
         <h1>**put a linkedin style vertical line with descriptions on the sides</h1>
+        <Timeline />
       </ExpCard>
     </Layout>
   )

@@ -5,7 +5,6 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 const fullPage = {
   width: "100%",
-  height: "100%",
   marginRight: "0px",
 
   display: "flex",
@@ -22,9 +21,8 @@ const smallPage = {
 
 const contentBox = {
   maxWidth: "1500px",
-  maxHeight: "800px",
+  height: "80vh",
   width: "80%",
-  height: "700px",
   border: "1.4px solid #909090",
 }
 
@@ -32,12 +30,19 @@ const content = {
   marginTop: "3vh",
 }
 
-const scrollable = {
+const scrollableSm = {
   overflowY: "scroll",
   overflowX: "hidden",
-  maxHeight: "100%",
+  height: "85.8vh",
 }
 
+const scrollableLg = {
+  overflowY: "auto",
+  overflowX: "hidden",
+  height: "68vh",
+}
+
+/* stil unsure about how to get the responsive scroll working */
 export default function Layout({ children }) {
   const bp = useBreakpoint();
 
@@ -48,7 +53,7 @@ export default function Layout({ children }) {
           <Navbar />
           <div style={content}>
             <p>Brandon Ngo</p>
-            <div style={scrollable}>
+            <div style={bp.sm ? scrollableSm : scrollableLg}>
               {children}
             </div>
           </div>

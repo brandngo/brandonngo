@@ -13,7 +13,7 @@ const cardBgSmall = {
   maxHeight: "", // should only be used if two cards are shown at the same time for alignment
   border: "1.4px solid #909090",
   padding: "1.2vh 1vw",
-  margin: "1.5vh 0",
+  marginBottom: "1.5vh",
   backgroundColor: "#172a46",
 }
 
