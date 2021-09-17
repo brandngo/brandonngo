@@ -14,3 +14,7 @@ p {
   color: white;
   font-family: "Coda";
 }
+
+img {
+  background-color: transparent;
+}

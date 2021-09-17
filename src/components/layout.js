@@ -16,13 +16,13 @@ const fullPage = {
 const smallPage = {
   border: "1.4px solid #909090",
   width: "99.5%",
-  height: "98vh",
+  height: "94%",
 }
 
 const contentBox = {
   maxWidth: "1500px",
-  height: "80vh",
-  width: "80%",
+  height: "80%",
+  width: "80%", // remember to use percentages for overarching containers
   border: "1.4px solid #909090",
 }
 
@@ -31,7 +31,7 @@ const content = {
 }
 
 const scrollableSm = {
-  overflowY: "scroll",
+  overflowY: "auto",
   overflowX: "hidden",
   height: "85.8vh",
 }
@@ -42,7 +42,6 @@ const scrollableLg = {
   height: "68vh",
 }
 
-/* stil unsure about how to get the responsive scroll working */
 export default function Layout({ children }) {
   const bp = useBreakpoint();
 

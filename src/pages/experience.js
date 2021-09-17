@@ -1,8 +1,7 @@
 import * as React from 'react'
-import ExpCard from '../components/ExpCard';
+import ExpCard from '../components/ExpCard'
 import Layout from '../components/Layout'
-import Timeline from '../components/Timeline';
-import resume from '../images/resume.pdf'
+import JobCard from '../components/JobCard'
 
 const iconImgs = [
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
@@ -32,6 +31,19 @@ const iconImgs = [
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
 ];
 
+// add new jobs on top of the last
+const jobs = [
+  {
+    company: "BlackBerry",
+    job: "Software Developer",
+    jobType: "Intern",
+    month: "Sep",
+    year: "2021",
+    location: "Waterloo, Ontario, Canada",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Blackberry_Logo_without_wordmark.svg/1200px-Blackberry_Logo_without_wordmark.svg.png",
+  },
+];
+
 const iconContainer = {
   display: "flex",
   flexFlow: "row wrap",
@@ -53,8 +65,7 @@ const Experience = () => {
         </div>
       </ExpCard>
       <ExpCard title="Employment">
-        <h1>**put a linkedin style vertical line with descriptions on the sides</h1>
-        <Timeline />
+        {jobs.map(job => <JobCard data={job} />)}
       </ExpCard>
     </Layout>
   )
