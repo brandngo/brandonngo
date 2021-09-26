@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import * as React from "react";
+import { Link } from "gatsby";
 
 const nav = {
   marginTop: "0.5vh",
@@ -8,14 +8,14 @@ const nav = {
   width: "70%",
   height: "100%",
   gap: "2vw",
-}
+};
 
 const navItems = {
   textDecoration: "none",
   fontFamily: "Consolas",
   fontSize: "2.5vh",
   color: "#909090",
-}
+};
 
 const activeItem = {
   textUnderlineOffset: "8px",
@@ -24,19 +24,33 @@ const activeItem = {
   fontFamily: "Consolas",
   fontSize: "2.5vh",
   color: "#909090",
-}
+};
 
 const Navbar = () => {
-  let path = window.location.pathname.split('/')[1];
+  let path = null;
+  if (typeof window !== "undefined") {
+    path = window.location.pathname.split("/")[1];
+  }
 
   return (
     <nav style={nav}>
-      <Link style={path === "contact" ? activeItem : navItems} to="/contact">CONTACT</Link>
-      <Link style={path === "experience" ? activeItem : navItems} to="/experience">EXPERIENCE</Link>
-      <Link style={path === "projects" ? activeItem : navItems} to="/projects">PROJECTS</Link>
-      <Link style={path === "" ? activeItem : navItems} to="/">ABOUT</Link>
+      <Link style={path === "contact" ? activeItem : navItems} to="/contact">
+        CONTACT
+      </Link>
+      <Link
+        style={path === "experience" ? activeItem : navItems}
+        to="/experience"
+      >
+        EXPERIENCE
+      </Link>
+      <Link style={path === "projects" ? activeItem : navItems} to="/projects">
+        PROJECTS
+      </Link>
+      <Link style={path === "" ? activeItem : navItems} to="/">
+        ABOUT
+      </Link>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
