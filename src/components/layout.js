@@ -16,7 +16,7 @@ const fullPage = {
 const smallPage = {
   border: "1.4px solid #909090",
   width: "99.5%",
-  height: "94%",
+  height: "99%",
 }
 
 const contentBox = {

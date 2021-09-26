@@ -14,14 +14,13 @@ const cardBgSmall = {
   border: "1.4px solid #909090",
   padding: "1.2vh 1vw",
   marginBottom: "1.5vh",
-  backgroundColor: "#172a46",
 }
 
-const Card = (props) => {
+const Card = ({children, color="#172a46"}) => {
 
   return (
-    <div style={cardBgSmall}>
-      {props.children}
+    <div style={{...cardBgSmall, backgroundColor: color}}>
+      {children}
     </div>
   )
 }

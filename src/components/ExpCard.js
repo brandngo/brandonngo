@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Card from './Card'
 
-const title = {
+const titleStl = {
   margin: "0.2vh 0 0 0.2vw",
   textAlign: "left",
   fontFamily: "Consolas",
@@ -9,12 +9,12 @@ const title = {
   color: "white",
 }
 
-const ExpCard = (props) => {
+const ExpCard = ({title, children, color}) => {
 
   return (
-    <Card>
-      <h1 style={title}>{props.title}</h1>
-      {props.children}
+    <Card color={color}>
+      <h1 style={titleStl}>{title}</h1>
+      {children}
     </Card>
   )
 }

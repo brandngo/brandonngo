@@ -13,7 +13,7 @@ const info = [
     tech: ["React", "Redux", "Firebase", "Socket.IO", "WebRTC"],
   },
   {
-    name: "courseBuddy",
+    name: "Course Buddy",
     summ: "A course planner for University of Waterloo students to plan their degree requirements. Features a drag and drop interface, login system, and user data sync.",
     links: {
       git: "https://github.com/brandngo/course-buddy",
@@ -22,7 +22,7 @@ const info = [
     tech: ["React", "Firebase", "Bootstrap/Material UI"],
   },
   {
-    name: "cryptoTicker",
+    name: "CryptoTicker",
     summ: "A cryptocurrency price board that provides real-time updates. Keep tracks of personal cryptocurrency portfolios using API integrations",
     links: {
       git: "https://github.com/brandngo/cryptoticker",

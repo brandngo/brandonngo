@@ -1,24 +1,27 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Layout from '../components/Layout'
+import ContactForm from '../components/ContactForm'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+const container = {
+  display: "flex",
+  flexFlow: "row wrap",
+  alignItems: "center",
+  gap: "2vw"
+};
 
 const Contact = () => {
-  const [name, setName] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(`this was submitted ${name}`);
-  }
-
   return (
     <Layout>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={name} onChange={e => setName(e.target.value)} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-
+      <ContactForm />
+      
+      <div style={container}>
+        <p>Connect with me here:</p>
+        <FontAwesomeIcon icon={faLinkedin} size="2x" color="#2867B2" />
+        <FontAwesomeIcon icon={faEnvelope} size="2x" color="#0072C6" />
+      </div>
     </Layout>
   )
 }

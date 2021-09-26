@@ -59,7 +59,7 @@ const icon = {
 const Experience = () => {
   return (
     <Layout>
-      <ExpCard title="Tech Stack">
+      <ExpCard title="Tech Stack" color="#787878">
         <div style={iconContainer}>
           {iconImgs.map(link => <img style={icon} src={link} alt="icon"/>)}
         </div>
