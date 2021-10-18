@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import ContactForm from '../components/ContactForm'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -14,7 +13,7 @@ const container = {
 
 const Contact = () => {
   return (
-    <Layout>
+    <div>
       <ContactForm />
       
       <div style={container}>
@@ -22,7 +21,7 @@ const Contact = () => {
         <FontAwesomeIcon icon={faLinkedin} size="2x" color="#2867B2" />
         <FontAwesomeIcon icon={faEnvelope} size="2x" color="#0072C6" />
       </div>
-    </Layout>
+    </div>
   )
 }
 

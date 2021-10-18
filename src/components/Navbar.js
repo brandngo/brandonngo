@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "gatsby";
 
 const nav = {
@@ -18,6 +18,7 @@ const navItems = {
 };
 
 const activeItem = {
+  textDecoration: "underline",
   textUnderlineOffset: "8px",
   textDecorationThickness: "3px",
   textDecorationColor: "#C95D3B",
@@ -26,9 +27,10 @@ const activeItem = {
   color: "#909090",
 };
 
-const Navbar = () => {
+const Navbar = ({setPath}) => {
   let path = null;
   if (typeof window !== "undefined") {
+    setPath(window.location.pathname.split("/")[1]);
     path = window.location.pathname.split("/")[1];
   }
 

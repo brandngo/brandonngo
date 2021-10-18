@@ -17,6 +17,12 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve("./src/components/Layout.js"),
+      },
+    },
   ],
 };
- // change breakpoint md to 800px width then use bp.md instead
+// change breakpoint md to 800px width then use bp.md instead

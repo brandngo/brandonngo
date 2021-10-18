@@ -22,7 +22,10 @@ const handleClick = () => {};
 
 const ContactForm = () => {
   return (
-    <div>
+    <form
+      method="post"
+      action="https://getform.io/f/e9d8310f-f257-4a78-a03c-dc7d10c2e732"
+    >
       <FormOption inputType="name" label="Name:" />
       <FormOption inputType="email" label="Email:" />
       <FormOption
@@ -36,7 +39,7 @@ const ContactForm = () => {
         onClick={(e) => handleClick()}
         style={submitBtn}
       />
-    </div>
+    </form>
   );
 };
 

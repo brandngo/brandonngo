@@ -1,6 +1,5 @@
 import * as React from 'react'
 import ExpCard from '../components/ExpCard'
-import Layout from '../components/Layout'
 import JobCard from '../components/JobCard'
 
 const iconImgs = [
@@ -58,7 +57,7 @@ const icon = {
 
 const Experience = () => {
   return (
-    <Layout>
+    <div>
       <ExpCard title="Tech Stack" color="#787878">
         <div style={iconContainer}>
           {iconImgs.map(link => <img style={icon} src={link} alt="icon"/>)}
@@ -67,7 +66,7 @@ const Experience = () => {
       <ExpCard title="Employment">
         {jobs.map(job => <JobCard data={job} />)}
       </ExpCard>
-    </Layout>
+    </div>
   )
 }
 

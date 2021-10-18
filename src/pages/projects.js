@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
 
 const info = [
@@ -35,9 +34,9 @@ const info = [
 // add carousel later using props.children or put into project card
 const Projects = () => {
   return (
-    <Layout>
+    <div>
       {info.map((project) => <ProjectCard title={project.name} summary={project.summ} tech={project.tech} links={project.links}></ProjectCard>)}
-    </Layout> 
+    </div> 
   )
 }
 
