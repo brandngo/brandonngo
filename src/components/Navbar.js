@@ -48,10 +48,7 @@ const Navbar = ({ setPath }) => {
       <Link style={path === "projects" ? activeItem : navItems} to="/projects">
         PROJECTS
       </Link>
-      <Link
-        style={window.location.pathname === "/" ? activeItem : navItems}
-        to="/"
-      >
+      <Link style={path === "" ? activeItem : navItems} to="/">
         ABOUT
       </Link>
     </nav>
