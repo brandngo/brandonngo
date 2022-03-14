@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Coda&display=swap");
 
 html {
   height: 100%;
@@ -11,6 +11,16 @@ body {
 
 /* leave font size as px to make it clearer for hidpi */
 p {
+  color: white;
+  font-family: "Coda";
+}
+
+a {
+  color: white;
+  font-family: "Coda";
+}
+
+li {
   color: white;
   font-family: "Coda";
 }

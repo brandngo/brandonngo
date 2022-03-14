@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./layout.css";
 import Navbar from "./Navbar";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
@@ -43,21 +43,27 @@ const scrollableLg = {
   height: "68vh",
 };
 
-export default function Layout({ children }) { 
+export default function Layout({ children }) {
   const bp = useBreakpoint();
+  const [animation, setAnimation] = useState(false);
   const [path, setPath] = useState("");
+
+  useEffect(() => {
+    setAnimation(!animation);
+  }, [path]);
 
   return (
     <div style={bp.sm ? smallPage : fullPage}>
       <div style={bp.sm ? null : contentBox}>
         <div style={{ margin: "1vw" }}>
-          <Navbar setPath={setPath}/>
+          <Navbar setPath={setPath} />
           <div style={content}>
             <p>Brandon Ngo</p>
             <div style={bp.sm ? scrollableSm : scrollableLg}>
               {children}
               <p>
-                PS C:\brandon\{path}&gt; <span className="blinkingCursor">|</span>
+                PS C:\brandon\{path}&gt;{" "}
+                <span className="blinkingCursor">|</span>
               </p>
             </div>
           </div>

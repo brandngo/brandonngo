@@ -27,7 +27,7 @@ const activeItem = {
   color: "#909090",
 };
 
-const Navbar = ({setPath}) => {
+const Navbar = ({ setPath }) => {
   let path = null;
   if (typeof window !== "undefined") {
     setPath(window.location.pathname.split("/")[1]);
@@ -48,7 +48,10 @@ const Navbar = ({setPath}) => {
       <Link style={path === "projects" ? activeItem : navItems} to="/projects">
         PROJECTS
       </Link>
-      <Link style={path === "" ? activeItem : navItems} to="/">
+      <Link
+        style={window.location.pathname === "/" ? activeItem : navItems}
+        to="/"
+      >
         ABOUT
       </Link>
     </nav>
