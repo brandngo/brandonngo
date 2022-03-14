@@ -48,7 +48,14 @@ const Navbar = ({ setPath }) => {
       <Link style={path === "projects" ? activeItem : navItems} to="/projects">
         PROJECTS
       </Link>
-      <Link style={path === "" ? activeItem : navItems} to="/">
+      <Link
+        style={
+          path !== "contact" && path !== "experience" && path !== "projects"
+            ? activeItem
+            : navItems
+        }
+        to="/"
+      >
         ABOUT
       </Link>
     </nav>
