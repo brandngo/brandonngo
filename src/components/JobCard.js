@@ -21,6 +21,11 @@ const JobCard = ({ data }) => {
         </p>
         <p style={{ color: "grey", margin: "0" }}>{data.location}</p>
         <hr />
+        <ul>
+          {data.extras.map((str) => (
+            <li>{str}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

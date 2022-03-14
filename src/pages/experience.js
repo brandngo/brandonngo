@@ -139,6 +139,13 @@ const jobs = [
     year: "2021",
     location: "Waterloo, Ontario, Canada",
     logo: bblogo,
+    extras: [
+      "Frontend development on cloud management application",
+      "Developed custom drilldown reports and dynamic cloud onboarding forms which are used by over 1000 unique users",
+      "Increased frontend performance by 130% over original solution by implementing debouncing techniques and reducing CRUD operation API calls",
+      "Led a team of three frontend developers to complete large costs report component",
+      "Maintained and developed code with little supervision while being the only frontend developer for onboarding forms.",
+    ],
   },
 ];
 

@@ -54,6 +54,9 @@ const ProjectCard = (props) => {
         </a>
       </div>
       <p style={summ}>{props.summary}</p>
+      <ul>
+        {props.extras ? props.extras.map((str) => <li>{str}</li>) : ""}
+      </ul>
       <div style={techContainer}>
         {props.tech.map((element) => (
           <h2 style={item}>{element}</h2>
