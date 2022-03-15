@@ -1,5 +1,6 @@
 import * as React from "react";
 import ProjectCard from "../components/ProjectCard";
+import Helmet from "react-helmet";
 
 const info = [
   {
@@ -48,6 +49,16 @@ const info = [
 const Projects = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="My list of projects that I've worked on."
+        />
+        <title>Brandon Ngo - Projects</title>
+        <link rel="canonical" href="https://brandonngo.gatsbyjs.io/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Helmet>
       {info.map((project) => (
         <ProjectCard
           title={project.name}

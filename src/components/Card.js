@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+/*
 const cardBgLarge = {
   maxWidth: "",
   maxHeight: "800px",
@@ -7,6 +8,7 @@ const cardBgLarge = {
   height: "700px",
   border: "1.4px solid #909090",
 }
+*/
 
 const cardBgSmall = {
   maxWidth: "98%",

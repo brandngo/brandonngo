@@ -50,6 +50,7 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     setAnimation(!animation);
+    // eslint-disable-next-line
   }, [path]);
 
   return (
